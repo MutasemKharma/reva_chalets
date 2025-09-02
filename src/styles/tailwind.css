@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #FDFCFA; /* warm off-white */
+    --color-foreground: #1A1A1A; /* rich near-black */
+    --color-border: #E5E3DF; /* subtle warm border */
+    --color-input: #F8F6F2; /* subtle warm gray */
+    --color-ring: #2D5A3D; /* deep emerald green */
+    
+    /* Card Colors */
+    --color-card: #F8F6F2; /* subtle warm gray */
+    --color-card-foreground: #1A1A1A; /* rich near-black */
+    
+    /* Popover Colors */
+    --color-popover: #FDFCFA; /* warm off-white */
+    --color-popover-foreground: #1A1A1A; /* rich near-black */
+    
+    /* Muted Colors */
+    --color-muted: #F8F6F2; /* subtle warm gray */
+    --color-muted-foreground: #6B6B6B; /* medium gray */
+    
+    /* Primary Colors */
+    --color-primary: #2D5A3D; /* deep emerald green */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #4A90A4; /* sophisticated blue-gray */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    
+    /* Accent Colors */
+    --color-accent: #B8860B; /* warm golden bronze */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* Destructive Colors */
+    --color-destructive: #A0522D; /* earthy reddish-brown */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Success Colors */
+    --color-success: #2D5A3D; /* deep emerald green */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    /* Warning Colors */
+    --color-warning: #D4A574; /* warm sandy tone */
+    --color-warning-foreground: #1A1A1A; /* rich near-black */
+    
+    /* Error Colors */
+    --color-error: #A0522D; /* earthy reddish-brown */
+    --color-error-foreground: #FFFFFF; /* white */
+    
+    /* Radius */
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  body, p, span, div {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-caption {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .shadow-luxury {
+    box-shadow: 0 2px 8px rgba(45, 90, 61, 0.08);
+  }
+  
+  .shadow-luxury-md {
+    box-shadow: 0 4px 12px rgba(45, 90, 61, 0.12);
+  }
+  
+  .shadow-luxury-lg {
+    box-shadow: 0 8px 24px rgba(45, 90, 61, 0.16);
+  }
+  
+  .shadow-luxury-xl {
+    box-shadow: 0 16px 48px rgba(45, 90, 61, 0.20);
+  }
+  
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .backdrop-blur-luxury {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  
+  .transition-luxury {
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .transition-luxury-slow {
+    transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
